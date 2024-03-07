@@ -32,4 +32,14 @@ sudo apt install zsh -y
 cp dotfiles/.zshrc ~/.zshrc
 source ~/.zshrc
 
+#docker
+
+#personal files
+
+#linguagens de uso
+
+#neovim config
+
+#pasta de apps
+
 
