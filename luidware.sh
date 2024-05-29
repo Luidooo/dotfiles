@@ -1,45 +1,23 @@
-#   !usr/bin/bash
+#!/bin/bash
 
-sudo apt update -y
-sudo apt upgrade -y
+$trash=trash
 
+function packageStatus() {
+	if [ $? -eq 0 ]; then
+		echo "$package successfully installed" >>packagesInstalles
+	else
+		echo "$package not successfully installed" >>packagesInstalles
+	fi
+}
 
-#git
-sudo apt-get install git-all
-cp dotfiles/.gitconfig ~/.gitconfig
+function downloadaPackage() {
+	sudo apt install $package -y >>a.log
+	packageStatus
+}
 
-git clone https://github.com/Luidooo/dotfiles.git
+sudo apt update -y >trash
+sudo apt upgrade -y >trash
 
-
-#vim
-sudo apt install vim -y
-cp dotfiles/.vimrc ~/.vimrc
-source ~/.vimrc
-
-#google
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.deb
-sudo apt -f install
-
-#zoxide
-sudo apt install zoxide
-
-#fzf
-sudo apt install fzf
-
-#zsh
-sudo apt install zsh -y
-cp dotfiles/.zshrc ~/.zshrc
-source ~/.zshrc
-
-#docker
-
-#personal files
-
-#linguagens de uso
-
-#neovim config
-
-#pasta de apps
-
-
+while IFS= read -r package; do
+	downloadaPackage
+done <packages
