@@ -1,0 +1,14 @@
+Get:1 https://packages.microsoft.com/ubuntu/20.04/prod focal InRelease [3,632 B]
+Hit:2 http://br.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:3 http://br.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:4 http://br.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:5 https://cli.github.com/packages stable InRelease
+Get:6 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:7 https://dl.google.com/linux/chrome/deb stable InRelease
+Hit:8 http://packages.osrfoundation.org/gazebo/ubuntu-stable jammy InRelease
+Ign:9 http://packages.ros.org/ros/ubuntu jammy InRelease
+Hit:10 http://packages.ros.org/ros2/ubuntu jammy InRelease
+Err:11 http://packages.ros.org/ros/ubuntu jammy Release
+  404  Not Found [IP: 2605:bc80:3010::134 80]
+Hit:12 https://ppa.launchpadcontent.net/flatpak/stable/ubuntu jammy InRelease
+Reading package lists...
